@@ -39,14 +39,12 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     @IBAction func signInSegment(_ sender: Any) {
         switch segment.selectedSegmentIndex {
         case 0:
-            Email.isHidden = true
-            Username.isHidden = false
-            Password.isHidden = false
+            signInorUp.setTitle("Sign In", for: UIControlState())
+            signIn = true
             break
         case 1:
-            Email.isHidden = false
-            Username.isHidden = false
-            Password.isHidden = false
+            signInorUp.setTitle("Sign Up", for: UIControlState())
+            signIn = false
             break
         default:
             break
@@ -54,11 +52,25 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     }
     
     @IBAction func signInTapped(_ sender: Any) {
-        
+        if signIn == true {
+            Auth.auth().signIn(withEmail: Email.text!, password: Password.text!) { (user, error) in
+                if error == nil {
+                    self.performSegue(withIdentifier: "loginOrSignUp", sender: self)
+                }
+            }
+        } else {
+            Auth.auth().createUser(withEmail: Email.text!, password: Password.text!) { (authResult, error) in
+                if error == nil {
+                    self.performSegue(withIdentifier: "loginOrSignUp", sender: self)
+                }
+            }
+            
+        }
     }
     
     @IBAction func googleLogin(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()
+        self.performSegue(withIdentifier: "loginOrSignUp", sender: self)
     }
 }
 
