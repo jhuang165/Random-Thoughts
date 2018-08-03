@@ -19,6 +19,8 @@
 		B07264F52110C7900072C036 /* icons8-alarm-40.png in Resources */ = {isa = PBXBuildFile; fileRef = B07264F42110C7900072C036 /* icons8-alarm-40.png */; };
 		B07264F721120F670072C036 /* icons8-screenshot-30.png in Resources */ = {isa = PBXBuildFile; fileRef = B07264F621120F660072C036 /* icons8-screenshot-30.png */; };
 		B07264F921121DCC0072C036 /* MostLikedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07264F821121DCC0072C036 /* MostLikedViewController.swift */; };
+		B07264FB21125C3A0072C036 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07264FA21125C390072C036 /* AboutUsViewController.swift */; };
+		B07264FD21125DC40072C036 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07264FC21125DC40072C036 /* AccountViewController.swift */; };
 		B0B8F79E210FEB8600ABA150 /* MainFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B8F79D210FEB8600ABA150 /* MainFeedViewController.swift */; };
 		B0DB616C21102BAE00593556 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB616A21102BAE00593556 /* SWRevealViewController.m */; };
 		B0DB616E21102E8300593556 /* icons8-menu-30.png in Resources */ = {isa = PBXBuildFile; fileRef = B0DB616D21102E8200593556 /* icons8-menu-30.png */; };
@@ -41,6 +43,8 @@
 		B07264F42110C7900072C036 /* icons8-alarm-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-alarm-40.png"; sourceTree = "<group>"; };
 		B07264F621120F660072C036 /* icons8-screenshot-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-screenshot-30.png"; sourceTree = "<group>"; };
 		B07264F821121DCC0072C036 /* MostLikedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostLikedViewController.swift; sourceTree = "<group>"; };
+		B07264FA21125C390072C036 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		B07264FC21125DC40072C036 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		B0B8F79D210FEB8600ABA150 /* MainFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedViewController.swift; sourceTree = "<group>"; };
 		B0DB616921102BAD00593556 /* Random Thoughts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Random Thoughts-Bridging-Header.h"; sourceTree = "<group>"; };
 		B0DB616A21102BAE00593556 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -103,12 +107,14 @@
 				B01D4131210F9521003A04B3 /* AppDelegate.swift */,
 				B01D4133210F9521003A04B3 /* ViewController.swift */,
 				B0B8F79D210FEB8600ABA150 /* MainFeedViewController.swift */,
+				B07264FA21125C390072C036 /* AboutUsViewController.swift */,
 				B07264EE2110B59E0072C036 /* Message.swift */,
 				B07264F02110C2AD0072C036 /* SlideOutMenuViewController.swift */,
+				B07264F821121DCC0072C036 /* MostLikedViewController.swift */,
+				B07264FC21125DC40072C036 /* AccountViewController.swift */,
 				B0DB616B21102BAE00593556 /* SWRevealViewController.h */,
 				B0DB616A21102BAE00593556 /* SWRevealViewController.m */,
 				B01D4135210F9521003A04B3 /* Main.storyboard */,
-				B07264F821121DCC0072C036 /* MostLikedViewController.swift */,
 				B0DB616D21102E8200593556 /* icons8-menu-30.png */,
 				B01D4138210F9522003A04B3 /* Assets.xcassets */,
 				B01D413A210F9522003A04B3 /* LaunchScreen.storyboard */,
@@ -305,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B07264FB21125C3A0072C036 /* AboutUsViewController.swift in Sources */,
 				B07264F12110C2AD0072C036 /* SlideOutMenuViewController.swift in Sources */,
 				B01D4134210F9521003A04B3 /* ViewController.swift in Sources */,
 				B0B8F79E210FEB8600ABA150 /* MainFeedViewController.swift in Sources */,
@@ -312,6 +319,7 @@
 				B07264F921121DCC0072C036 /* MostLikedViewController.swift in Sources */,
 				B01D4132210F9521003A04B3 /* AppDelegate.swift in Sources */,
 				B0DB616C21102BAE00593556 /* SWRevealViewController.m in Sources */,
+				B07264FD21125DC40072C036 /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

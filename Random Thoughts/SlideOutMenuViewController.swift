@@ -24,7 +24,7 @@ class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITable
         profileImage.maskCircle(anyImage: image!) */
         menus.append("Recent Feed")
         menus.append("Most Liked")
-        menus.append("About")
+        menus.append("About Us")
         menus.append("My Account")
         menus.append("Sign Out")
         // Do any additional setup after loading the view.
@@ -71,14 +71,27 @@ class SlideOutMenuViewController: UIViewController, UITableViewDelegate, UITable
         if cell?.textLabel?.text == "My Account"
         {
             let mainstoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewcontroller = mainstoryboard.instantiateViewController(withIdentifier: "MostLikedViewController") as! MostLikedViewController
+            let newViewcontroller = mainstoryboard.instantiateViewController(withIdentifier: "AccountViewController") as! AccountViewController
             let newFrontController = UINavigationController.init(rootViewController: newViewcontroller)
             
             revealviewcontroller.pushFrontViewController(newFrontController, animated: true)
         }
-        if cell?.textLabel?.text == "Setting"
+        if cell?.textLabel?.text == "About Us"
         {
-            print("setting Tapped")
+            let mainstoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewcontroller = mainstoryboard.instantiateViewController(withIdentifier: "AboutUsViewController") as! AboutUsViewController
+            let newFrontController = UINavigationController.init(rootViewController: newViewcontroller)
+            
+            revealviewcontroller.pushFrontViewController(newFrontController, animated: true)
+        }
+        if cell?.textLabel?.text == "Sign Out"
+        {
+            let firebaseAuth = Auth.auth()
+            do {
+                try firebaseAuth.signOut()
+            } catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)
+            }
         }
     }
 

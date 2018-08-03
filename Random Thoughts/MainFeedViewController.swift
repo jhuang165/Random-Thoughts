@@ -25,6 +25,7 @@ class MainFeedViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.dataSource = self
         let databaseRef = Database.database().reference()
         print(databaseRef)
+    view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         // Do any additional setup after loading the view.
     }
 

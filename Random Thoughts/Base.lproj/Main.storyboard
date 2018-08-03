@@ -145,11 +145,13 @@
                         <segue destination="0YO-5R-hft" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="Keg-uf-Lbf"/>
                         <segue destination="GSY-Xm-BiL" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="Qca-10-Pqp"/>
                         <segue destination="HqW-na-jNj" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="QZP-zU-Htd"/>
+                        <segue destination="pFH-l3-qaZ" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="qi5-ht-ZoE"/>
+                        <segue destination="2f5-iy-yhM" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="iHY-zf-bzx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k0F-XW-yUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="866" y="118"/>
+            <point key="canvasLocation" x="878" y="118"/>
         </scene>
         <!--Slide Out Menu View Controller-->
         <scene sceneID="dff-g3-e9c">
@@ -184,6 +186,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="eM7-Fq-Lqi" id="qff-tN-rq5"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="signOut" id="u4V-Yi-U4O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLM-o7-JSk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -441,6 +444,83 @@
             </objects>
             <point key="canvasLocation" x="2615" y="1207"/>
         </scene>
+        <!--About Us-->
+        <scene sceneID="FOw-dq-hh3">
+            <objects>
+                <viewController storyboardIdentifier="AboutUsViewController" id="wzJ-PR-xIT" customClass="AboutUsViewController" customModule="Random_Thoughts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KbY-UK-jxs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IZR-dO-q15">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">© Jeffrey Huang 2018. All rights reserved. Random Thoughts is an app where you can post your thoughts! Ever thought of something? Ever been dying to tell someone? Well, you are in the right place! Accumulate points through posting thoughts and likes. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IZR-dO-q15" firstAttribute="bottom" secondItem="Xpq-TB-hkF" secondAttribute="bottom" id="Czc-lG-crm"/>
+                            <constraint firstAttribute="trailing" secondItem="IZR-dO-q15" secondAttribute="trailing" id="NSN-Li-Fdp"/>
+                            <constraint firstItem="IZR-dO-q15" firstAttribute="top" secondItem="Xpq-TB-hkF" secondAttribute="top" id="apy-uE-Tqw"/>
+                            <constraint firstItem="IZR-dO-q15" firstAttribute="leading" secondItem="KbY-UK-jxs" secondAttribute="leading" id="jbb-QG-18l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xpq-TB-hkF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Us" id="Xn3-5l-Yxc">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icons8-menu-30.png" id="BUO-Qx-ze7"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="BUO-Qx-ze7" id="2ZI-IA-cM1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Rw-6d-La5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2613.5999999999999" y="1957.8710644677662"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="e9n-H0-b1s">
+            <objects>
+                <viewController storyboardIdentifier="AccountViewController" id="I1I-8y-B6h" customClass="AccountViewController" customModule="Random_Thoughts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FnM-te-Bzg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9N-eB-SWF">
+                                <rect key="frame" x="160" y="346" width="54" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QzN-76-xny">
+                                <rect key="frame" x="135" y="98" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="UbQ-a9-ZZh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="YvF-7y-8SU">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icons8-menu-30.png" id="1jI-4M-rJ7"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ng1-l5-u1v">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yrf-pU-jh5">
+                                <rect key="frame" x="329" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="1jI-4M-rJ7" id="nT3-eH-5Zb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RK3-zR-Sf3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2613.5999999999999" y="2700.8995502248877"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="N31-hP-teH">
             <objects>
@@ -458,6 +538,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Dj-nr-WES" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1676" y="1207"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h6Z-ni-Kg3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pFH-l3-qaZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rbu-Sj-j5S">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wzJ-PR-xIT" kind="relationship" relationship="rootViewController" id="oof-kF-LuT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XoH-SQ-zqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1676" y="1958"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mf4-xg-Gd9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2f5-iy-yhM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dht-Wr-n5Z">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I1I-8y-B6h" kind="relationship" relationship="rootViewController" id="uqj-zu-QGP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8mf-9B-d48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1676" y="2701"/>
         </scene>
     </scenes>
     <resources>
